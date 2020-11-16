@@ -46,7 +46,7 @@ public class ApiTest {
 
 
     @Test
-    public void should_add_animal_to_database() throws Exception {
+    public void should_add_animal() throws Exception {
         Animal animal = new Animal("Elephant");
         mockMvc.perform(post("/add")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -57,7 +57,7 @@ public class ApiTest {
 
 
     @Test
-    public void should_update_animal_in_databse() throws Exception {
+    public void should_update_animal() throws Exception {
         Animal newAnimal = new Animal("Horse");
         mockMvc.perform(put("/update")
                 .contentType(MediaType.APPLICATION_JSON)
