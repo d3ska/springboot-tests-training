@@ -36,8 +36,7 @@ public class ApiTest {
 
     @Test
     public void should_return_animal_by_id() throws Exception {
-        mockMvc.perform(get("/get/{id}", 1
-        )
+        mockMvc.perform(get("/get/{id}", 1)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
